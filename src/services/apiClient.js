@@ -1,5 +1,7 @@
 const BASE_URL = import.meta.env.VITE_BACKEND_HOST || "http://127.0.0.1:3000/api/v1";
 
+console.log(BASE_URL)
+
 export async function getProducts() {
     const res = await fetch(`${BASE_URL}/products`);
     const data = await res.json();
