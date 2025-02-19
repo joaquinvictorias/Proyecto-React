@@ -14,7 +14,7 @@ const VideoComponent = React.memo(() => {
         preload="metadata"
       >
         <source src={skullVideo} type="video/mp4" />
-        Tu navegador no soporta la etiqueta de video
+        Tu navegador no soporta la etiqueta de vídeo
       </video>
     </div>
   );
