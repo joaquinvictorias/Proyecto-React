@@ -5,6 +5,8 @@ import { useState } from "react";
 import Error from "../Error/Error";
 import { useUser } from "../../store/UserContext";
 
+const BASE_URL = import.meta.env.VITE_BACKEND_HOST || "http://127.0.0.1:3000/api/v1";
+
 function LoginUser() {
     const navigate = useNavigate();
     const { login } = useUser();
@@ -20,7 +22,7 @@ function LoginUser() {
 
         try {
             setIsLoading(true);
-            const response = await fetch("http://127.0.0.1:3000/api/v1/auth/login", {
+            const response = await fetch(`${BASE_URL}/auth/login`, {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
